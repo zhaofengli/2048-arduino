@@ -1,4 +1,4 @@
-# 2048 for Arduino
+# 2048 for Arduino [![Build Status](https://travis-ci.org/lizhaofeng1998/2048-arduino.svg?branch=master)](https://travis-ci.org/lizhaofeng1998/2048-arduino)
 A clone of the popular tile-joining game [2048](https://gabrielecirulli.github.io/2048/) for the Arduino platform.
 A PCD8544 LCD screen (The one used on the "indestructible" Nokia 3110 and 5110) is used as 
 its display, and four buttons are used for controlling.
