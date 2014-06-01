@@ -90,7 +90,7 @@
    The INTERNAL analog reference is 1.1V on ATmega328 and ATmega168, and 
    2.56V on ATmega8.
 */
-#define analogReferenceVoltage 2.56
+#define analogReferenceVoltage 1.1
 
 // === Battery meter ===
 /* enableBatteryMeter
