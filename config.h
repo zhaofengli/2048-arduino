@@ -190,7 +190,8 @@
    
    Enable the Bounce library which can debounce buttons.
    
-   If 1, the Bounce library will be included.
+   If 1, the Bounce library will be included. Please uncomment
+   the line in the "Libraries" section of the Makefile to build.
    If 0, a simple button handler will be used instead which does
    not have debouncing ability. This reduces build size.
    

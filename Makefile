@@ -9,7 +9,7 @@
 # A board tag defined in hardware/arduino/boards.txt in your Arduino 
 # IDE installation directory. For example, uno.
 ########################################################################
-BOARD_TAG    = bare8
+BOARD_TAG    = uno
 
 ########################################################################
 # Serial device
@@ -25,7 +25,7 @@ BOARD_TAG    = bare8
 # The directory of your Arduino IDE installation. It contains 
 # sub-directories named "hardware", "examples", "libraries", etc..
 ########################################################################
-ARDUINO_DIR := /home/zhaofeng/arduino-1.0.5
+ARDUINO_DIR := /opt/arduino-1.0.5
 
 ########################################################################
 # AVR toolchain dir
@@ -35,18 +35,21 @@ ARDUINO_DIR := /home/zhaofeng/arduino-1.0.5
 # Windows or would like to use the one bundled with the IDE, use the
 # commented-out one below.
 ########################################################################
-AVR_TOOLS_DIR := /usr
-#AVR_TOOLS_DIR := $(ARDUINO_DIR)/hardware/tools/avr
+#AVR_TOOLS_DIR := /usr
+AVR_TOOLS_DIR := $(ARDUINO_DIR)/hardware/tools/avr
+
+########################################################################
+# Libraries
+#
+# If you have enableBounceLibrary enabled in config.h, uncomment the 
+# following line.
+########################################################################
+#ARDUINO_LIBS = Bounce2
 
 ########################################################################
 # Don't touch anything below! "make" and enjoy! The hex files will be 
 # placed under the build/ sub-directory under this one.
 ########################################################################
-
-########################################################################
-# Libraries
-########################################################################
-ARDUINO_LIBS = Bounce2
 
 ########################################################################
 # Target dir
@@ -63,4 +66,4 @@ CPPFLAGS     = -mcall-prologues
 ########################################################################
 # Main Arduino.mk
 ########################################################################
-include /home/zhaofeng/Arduino-Makefile/Arduino.mk
+include /opt/Arduino-Makefile/Arduino.mk
