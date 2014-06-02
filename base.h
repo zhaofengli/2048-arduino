@@ -584,9 +584,8 @@ void printMessage() {
 		char buffer[13]; // line buffer
 #if enableBatteryMeter
 		unsigned char battery = measureBattery();
-		//int battery = analogRead( pinAnalogBatteryVoltage );
 		if ( battery ) {
-			sprintf( buffer, "$%d &%d", score, battery );
+			sprintf( buffer, "$%d &%u", score, battery );
 		} else {
 #endif
 			sprintf( buffer, "$%d", score );
@@ -830,7 +829,7 @@ unsigned char measureBattery() {
 	unsigned int vf, rvf, vminf, capacity, curf, pf;
 	
 	int adc = analogRead( pinAnalogBatteryVoltage );
-	vf = 100 * adc / 1023 * analogReferenceVoltage; // Vadc * 100
+	vf = (unsigned int)adc / 10.23 * analogReferenceVoltage; // Vadc * 100
 	rvf = vf * batteryVoltageMultiplier; // Vreal * 100
 	vminf = 100 * batteryLowestVoltage; // Vlowest * 100
 	
