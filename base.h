@@ -835,7 +835,7 @@ unsigned char measureBattery() {
 	
 	if ( rvf < vminf ) // lower than Vlowest
 		return 0;
-	else if ( rvf >= vminf ) // higher than Vlowest
+	else if ( rvf >= 100 * batteryVoltage ) // higher than Vbat
 		return 100;
 	else {
 		capacity =  batteryVoltage - batteryLowestVoltage;
