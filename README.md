@@ -75,7 +75,7 @@ submit a pull request. Thank you for your contributions!
 * The main .ino contains only the main routines
 * "base.h" contains the core code
 * "config.h" contains the configuations
-* "pcd8544.h" contains an edited version of the excellent
+* "display.h" contains an edited version of the excellent
   PCD8544 driver from the Arduino wiki
   http://playground.arduino.cc/Code/PCD8544
 * "serial.h" contains a wrapper for the standard Serial library

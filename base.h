@@ -32,7 +32,7 @@
 #include <math.h>
 #include <avr/pgmspace.h>
 #include "config.h"
-#include "pcd8544.h"
+#include "display.h"
 #include "button.h"
 #include "serial.h"
 #include "bitmap.h"
