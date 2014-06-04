@@ -2,9 +2,12 @@
 # Travis CI configuation
 language: cpp
 before_script:
-  - "cd /tmp"
-  - "wget http://arduino.googlecode.com/files/arduino-1.0.5-linux64.tgz"
-  - "tar -xf arduino-1.0.5-linux64.tgz"
-  - "git clone --depth=1 https://github.com/sudar/Arduino-Makefile.git"
-  - "cd $TRAVIS_BUILD_DIR"
-script: make -f travis.mk
+  - cd /tmp
+  - wget http://arduino.googlecode.com/files/arduino-1.0.5-linux64.tgz
+  - tar -xf arduino-1.0.5-linux64.tgz
+  - git clone --depth=1 https://github.com/sudar/Arduino-Makefile.git
+  - cd $TRAVIS_BUILD_DIR
+script: 
+  - make -f travis.mk
+  - cd tests
+  - make test
