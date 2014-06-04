@@ -73,14 +73,21 @@ submit a pull request. Thank you for your contributions!
 
 ## Exploring the source
 * The main .ino contains only the main routines
-* "base.h" contains the core code
-* "config.h" contains the configuations
-* "display.h" contains an edited version of the excellent
+* `base.h` contains the core logics
+* `config.h` contains the configuations
+* `board.h` contains a platform-independent implementation of the tile moving 
+  logic
+* `random.h` contains the random number generation routines
+* "format.h` contains platform-independent string formatting routines
+* `gamesave.h` contains game saving routines
+* `battery.h` contains the battery meter code
+* `display.h` contains an edited version of the excellent
   PCD8544 driver from the Arduino wiki
   http://playground.arduino.cc/Code/PCD8544
-* "serial.h" contains a wrapper for the standard Serial library
-* "bitmap.h" contains the logo bitmap
-* "button.h" contains the button handling routines
+* `serial.h` contains a wrapper for the standard Serial library
+* `bitmap.h` contains the logo bitmap
+* `button.h` contains the button handling routines
+* `tests/` contains unit tests for `board.h` and `format.h`
 
 ## Acknowledgement
 The project is not possible without:
