@@ -197,4 +197,4 @@
    
    See button.h for more info.
 */
-#define enableBounceLibrary 0
+#define enableBounceLibrary 1

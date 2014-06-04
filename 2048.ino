@@ -94,19 +94,10 @@
 // Get the show on!
 void setup() {
 	initGame();
+	loopGame();
 }
 
-// Keep everything going!
+// Nothing to see here...
 void loop() {
-	unsigned int largest, l; // largest tile
-	if ( serialControl() || buttonControl() ) { // action taken
-		placeNewTile();
-		printBoard();
-		printMessage();
-		if ( ( l = getLargestTile() ) > largest ) {
-			largest = l;
-			if ( largest >= 512 )
-				saveGame();
-		}
-	}
+
 }
