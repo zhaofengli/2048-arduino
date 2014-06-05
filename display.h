@@ -16,8 +16,11 @@
 #include <Arduino.h>
 #include <avr/eeprom.h>
 #include "format.h"
-#include "button.h"
 #include "config.h"
+
+#if lcdContrastAdjustable
+#include "button.h"
+#endif
 
 // == Runtime variables ==
 #if lcdContrastAdjustable
@@ -254,10 +257,11 @@ void printLine( const char * str ) {
 
 // let the user adjust contrast settings 
 void lcdInteractiveContrast() {
-	char buffer[13];
 	lcdClear();
+#if lcdContrastAdjustable
+	char buffer[13];	
 	printLine( "contrast" );
-	while( true ) { // lock the user in
+	for ( ; ; ) { // lock the user in
 		if ( isPressed( buttonRight ) ) {
 			lcdSetContrast( lcdGetContrast() + 0x01 );
 		} else if ( isPressed( buttonLeft ) ) {
@@ -270,6 +274,10 @@ void lcdInteractiveContrast() {
 		itoa( lcdGetContrast(), buffer, 10 );
 		lcdString( buffer );
 	}
+#else
+	printLine( "disabled" );
+	for ( ; ; );
+#endif
 }
 
 #endif

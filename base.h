@@ -247,13 +247,11 @@ void modeDebug() {
 	printLine( "Debug mode" );
 	printLine( "<@ >$ ^& _x" );
 	while ( true ) {
-#if lcdContrastAdjustable
 		// adjust contrast
 		if ( isPressed( buttonLeft ) ) { // contrast
 			writeSerial( "Adjusting contrast..." );
 			lcdInteractiveContrast();
 		}
-#endif
 
 #if enableGameSave
 		if ( isPressed( buttonRight ) ) { // game save
