@@ -9,6 +9,9 @@
 	This file is provided AS IS without any warranty.
 */
 
+#ifndef DISPLAY_H
+#define DISPLAY_H
+
 // == Includes ==
 #include <Arduino.h>
 #include <avr/eeprom.h>
@@ -238,3 +241,4 @@ void lcdLoadContrast() {
 #endif
 }
 
+#endif

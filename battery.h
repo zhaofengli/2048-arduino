@@ -28,6 +28,9 @@
 	OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#ifndef BATTERY_H
+#define BATTERY_H
+
 #include <Arduino.h>
 #include <math.h>
 #include "config.h"
@@ -77,3 +80,5 @@ unsigned char measureBattery() {
 	return 0;
 #endif
 }
+
+#endif

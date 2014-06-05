@@ -27,6 +27,9 @@
 	OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#ifndef BASE_H
+#define BASE_H
+
 // == Includes ==
 #include <Arduino.h>
 #include <avr/pgmspace.h>
@@ -420,3 +423,5 @@ void loopGame() {
 
 // == References ==
 // {{Reflist}} ;P
+
+#endif

@@ -30,6 +30,9 @@
 
 // Keep this file platform-independent!
 
+#ifndef BOARD_H
+#define BOARD_H
+
 // the board
 unsigned int board[4][4];
 
@@ -291,3 +294,4 @@ bool isCoordValid( unsigned char x, unsigned char y ) {
 	return x <= 3 && y <= 3;
 }
 
+#endif

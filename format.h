@@ -30,6 +30,9 @@
 
 // Keep this file platform-independent!
 
+#ifndef FORMAT_H
+#define FORMAT_H
+
 #include <string.h>
 
 // == Function prototypes ==
@@ -115,3 +118,5 @@ char * getLineString( char * buffer, char * str ) {
 	sprintf( buffer, "%-12.12s", str );
 	return buffer;
 }
+
+#endif

@@ -30,6 +30,9 @@
 
 // Keep this file Arduino-free!
 
+#ifndef GAMESAVE_H
+#define GAMESAVE_H
+
 #include <avr/eeprom.h>
 #include "config.h"
 
@@ -113,3 +116,5 @@ bool loadGame( unsigned int board[][4] ) {
    Returns true if successful.
 */
 bool clearSave();
+
+#endif

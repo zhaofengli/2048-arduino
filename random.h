@@ -28,6 +28,9 @@
 	OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#ifndef RANDOM_H
+#define RANDOM_H
+
 #include <Arduino.h>
 #include "config.h"
 
@@ -98,3 +101,5 @@ unsigned long getRandomSeed() {
 	}
 	return seed;
 }
+
+#endif

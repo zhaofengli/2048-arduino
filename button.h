@@ -9,6 +9,9 @@
 	This file is provided AS IS without any warranty.
 */
 
+#ifndef BUTTON_H
+#define BUTTON_H
+
 // == Includes ==
 #include <Arduino.h>
 #include "config.h"
@@ -78,3 +81,5 @@ bool isPressed( unsigned char button ) {
 	return false;
 #endif
 }
+
+#endif

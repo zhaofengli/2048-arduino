@@ -5,6 +5,8 @@
 	This file is provided AS IS without any warranty.
 */
 
+#ifndef SERIAL_H
+#define SERIAL_H
 
 #include "config.h"
 
@@ -53,4 +55,4 @@ int readSerialReal() {
 #endif
 }
 
-
+#endif
