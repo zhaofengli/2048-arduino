@@ -79,9 +79,6 @@ bool buttonControl();
 // show the debug menu
 void modeDebug();
 
-// let the user adjust contrast settings 
-void modeContrast();
-
 // print the logo
 void printLogo();
 
@@ -254,7 +251,7 @@ void modeDebug() {
 		// adjust contrast
 		if ( isPressed( buttonLeft ) ) { // contrast
 			writeSerial( "Adjusting contrast..." );
-			modeContrast();
+			lcdInteractiveContrast();
 		}
 #endif
 
@@ -284,26 +281,6 @@ void modeDebug() {
 			lcdClear();
 			return;
 		}
-	}
-}
-
-// let the user adjust contrast settings 
-void modeContrast() {
-	char buffer[13];
-	lcdClear();
-	printLine( "contrast" );
-	while( true ) { // lock the user in
-		if ( isPressed( buttonRight ) ) {
-			lcdSetContrast( lcdGetContrast() + 0x01 );
-		} else if ( isPressed( buttonLeft ) ) {
-			lcdSetContrast( lcdGetContrast() - 0x01 );
-		} else if ( isPressed( buttonUp ) ) {
-			lcdSetContrast( lcdDefaultContrast );
-		} else continue;
-		lcdInit();
-		lcdClear();
-		itoa( lcdGetContrast(), buffer, 10 );
-		lcdString( buffer );
 	}
 }
 
@@ -381,7 +358,7 @@ void initGame() {
 #if lcdContrastAdjustable
 	// contrast mode
 	if ( digitalRead( pinButtonDown ) == LOW ) { // down button pushed
-		modeContrast();
+		lcdInteractiveContrast();
 	}
 #endif
 #endif
