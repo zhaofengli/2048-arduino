@@ -78,11 +78,11 @@ submit a pull request. Thank you for your contributions!
 * `board.h` contains a platform-independent implementation of the tile moving 
   logic
 * `random.h` contains the random number generation routines
-* "format.h` contains platform-independent string formatting routines
+* `format.h` contains platform-independent string formatting routines
 * `gamesave.h` contains game saving routines
 * `battery.h` contains the battery meter code
 * `display.h` contains an edited version of the excellent
-  PCD8544 driver from the Arduino wiki
+  PCD8544 driver from the Arduino wiki 
   http://playground.arduino.cc/Code/PCD8544
 * `serial.h` contains a wrapper for the standard Serial library
 * `bitmap.h` contains the logo bitmap
