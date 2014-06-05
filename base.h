@@ -363,16 +363,16 @@ void initGame() {
 }
 
 void loopGame() {
+	unsigned int last = 0, cur; // largest tile
 	for ( ; ; ) {
-	 	unsigned int largest = 0, l; // largest tile
 		if ( serialControl() || buttonControl() ) { // action taken
 			placeNewTile();
 			printBoard();
 			printMessage();
-			l = getLargestTile();
-			if ( l > largest ) {
-				largest = l;
-				if ( largest >= 512 )
+			cur = getLargestTile();
+			if ( cur > last ) {
+				last = cur;
+				if ( cur >= saveThreshold )
 					saveGame( board );
 			}
 		}

@@ -185,6 +185,12 @@
 */
 #define enableGameSave 1
 
+/* saveThreshold
+   
+   The minimum tile value for the game to be saved.
+*/
+#define saveThreshold 512
+
 // == Bounce library ==
 /* enableBounceLibrary
    

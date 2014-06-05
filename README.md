@@ -41,7 +41,7 @@ Note that if you have `enableDebugMode` set to 0, holding the down button when p
 you directly to the adjustment mode.
 
 If you have `enableGameSave` set to 1, the game is automatically saved every time you reach 
-a larger tile above 256. To restore your game, enter the debug mode and press right.
+a larger tile above 256 (adjustable in `saveThreshold`). To restore your game, enter the debug mode and press right.
 
 ## Problems
 ### The LCD screen is completely blank.
