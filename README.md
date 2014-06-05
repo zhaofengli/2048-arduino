@@ -81,7 +81,7 @@ submit a pull request. Thank you for your contributions!
 * `format.h` contains platform-independent string formatting routines
 * `gamesave.h` contains game saving routines
 * `battery.h` contains the battery meter code
-* `display.h` contains an edited version of the excellent
+* `display.h` contains an edited version of the excellent 
   PCD8544 driver from the Arduino wiki 
   http://playground.arduino.cc/Code/PCD8544
 * `serial.h` contains a wrapper for the standard Serial library
