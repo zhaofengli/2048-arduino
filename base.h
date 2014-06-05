@@ -235,7 +235,7 @@ bool buttonControl() {
 }
 
 // show the debug menu
-void modeDebug() {
+void interactiveDebug() {
 	lcdClear();
 	printLogo();
 	printLine( "Debug mode" );
@@ -344,7 +344,7 @@ void initGame() {
 #if enableDebugMode
 	// debug mode
 	if ( digitalRead( pinButtonDown ) == LOW ) {
-		modeDebug();
+		interactiveDebug();
 	}
 #else
 #if lcdContrastAdjustable
