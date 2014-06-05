@@ -15,6 +15,7 @@
 // == Includes ==
 #include <Arduino.h>
 #include <avr/eeprom.h>
+#include "format.h"
 #include "config.h"
 
 // == Runtime variables ==
@@ -154,6 +155,7 @@ void lcdInit( void );
 unsigned int lcdGetContrast();
 void lcdSetContrast( byte newContrast );
 void lcdLoadContrast();
+void printLine( const char * str );
 
 // == Actual code ==
 
@@ -239,6 +241,14 @@ void lcdLoadContrast() {
 #else
 	contrast = lcdDefaultContrast;
 #endif
+}
+
+// prints a line to LCD
+void printLine( const char * str ) {
+	char buffer[13]; // don't modify constants!
+	strncpy( buffer, str, 12 );
+	getLineString( buffer, buffer );
+	lcdString( buffer );
 }
 
 #endif

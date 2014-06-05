@@ -68,9 +68,6 @@ void printBoard();
 // print the message
 void printMessage();
 
-// prints a line to LCD
-void printLine( const char * str );
-
 // read control chars via serial and take coressponding actions
 // 1 if action taken (board changed), 0 if nothing done to board
 bool serialControl();
@@ -196,14 +193,6 @@ void printMessage() {
 		}
 #endif
 	}
-}
-
-// prints a line to LCD
-void printLine( const char * str ) {
-	char buffer[13]; // don't modify constants!
-	strncpy( buffer, str, 12 );
-	getLineString( buffer, buffer );
-	lcdString( buffer );
 }
 
 // read control chars via serial and take coressponding actions
