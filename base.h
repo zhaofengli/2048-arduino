@@ -49,12 +49,6 @@
 // == Function prototypes ==
 
 // === Game process ===
-
-/* save
-   
-   Check if it's time to save the game and save if needed.
-*/
-
 /* placeNewTile
    
    Place a new tile on the board.
