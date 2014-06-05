@@ -4,6 +4,13 @@
 ########################################################################
 
 ########################################################################
+# Arduino-Makefile path
+# 
+# The directory where Arduino.mk resides.
+########################################################################
+ARDMK_DIR    = /opt/Arduino-Makefile/
+
+########################################################################
 # Arduino board
 #
 # A board tag defined in hardware/arduino/boards.txt in your Arduino 
@@ -66,4 +73,4 @@ CPPFLAGS     = -mcall-prologues
 ########################################################################
 # Main Arduino.mk
 ########################################################################
-include /opt/Arduino-Makefile/Arduino.mk
+include $(ARDMK_DIR)/Arduino.mk
