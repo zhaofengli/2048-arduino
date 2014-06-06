@@ -38,9 +38,7 @@ ARDUINO_DIR := /opt/arduino-1.0.5
 # AVR toolchain dir
 #
 # The directory of your AVR toolchain. If you installed it via your
-# package manager on Linux, it's probably /usr. If you are using 
-# Windows or would like to use the one bundled with the IDE, use the
-# commented-out one below.
+# package manager on Linux, it's probably /usr.
 ########################################################################
 #AVR_TOOLS_DIR := /usr
 AVR_TOOLS_DIR := $(ARDUINO_DIR)/hardware/tools/avr
