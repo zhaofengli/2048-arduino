@@ -140,10 +140,10 @@ void printMessage() {
 #if enableBatteryMeter
 		unsigned char battery = measureBattery();
 		if ( battery ) {
-			sprintf( buffer, "$%d &%u", score, battery );
+			sprintf( buffer, "$%u &%u", score, battery );
 		} else {
 #endif
-			sprintf( buffer, "$%d", score );
+			sprintf( buffer, "$%u", score );
 #if enableBatteryMeter
 		}
 #endif
@@ -263,7 +263,7 @@ void interactiveDebug() {
 			while( true ) {
 				lcdClear();
 				battery = measureBattery();
-				sprintf( buffer, "&%d", battery );
+				sprintf( buffer, "&%u", battery );
 				lcdString( buffer );
 				delay( 1000 );
 			}
