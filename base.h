@@ -140,10 +140,10 @@ void printMessage() {
 #if enableBatteryMeter
 		unsigned char battery = measureBattery();
 		if ( battery ) {
-			sprintf( buffer, "$%u &%u", score, battery );
+			sprintf( buffer, "$%lu &%u", score, battery );
 		} else {
 #endif
-			sprintf( buffer, "$%u", score );
+			sprintf( buffer, "$%lu", score );
 #if enableBatteryMeter
 		}
 #endif

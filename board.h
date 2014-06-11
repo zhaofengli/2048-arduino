@@ -37,7 +37,7 @@
 unsigned int board[4][4];
 
 // current score
-unsigned int score;
+unsigned long score;
 
 // == Function prototypes ==
 
