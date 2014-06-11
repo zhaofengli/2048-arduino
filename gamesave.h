@@ -120,10 +120,12 @@ bool loadGame( unsigned int board[][4] ) {
 */
 bool clearSave() {
 #if enableGameSave
+	/*
 	unsigned char x, y;
 	for ( x = 0; x <= 3; x++ )
 		for ( y = 0; y <= 3; y++ )
 			eeprom_write_word( &boardsave[x][y], 0 );
+	*/
 	eeprom_write_byte( &boardsaveflag, 0 );
 	return true;
 #else
