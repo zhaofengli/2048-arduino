@@ -40,6 +40,7 @@
 // Game save
 #if enableGameSave
 unsigned int boardsave[4][4] EEMEM;
+unsigned long scoresave EEMEM;
 unsigned char boardsaveflag EEMEM = 0;
 #endif
 
@@ -81,6 +82,7 @@ bool saveGame( unsigned int board[][4] ) {
 	for ( x = 0; x <= 3; x++ )
 		for ( y = 0; y <= 3; y++ )
 			eeprom_write_word( &boardsave[x][y], board[x][y] );
+	eeprom_write_dword( &scoresave, score );
 	eeprom_write_byte( &boardsaveflag, 1 );
 	return true;
 #else
@@ -101,6 +103,7 @@ bool loadGame( unsigned int board[][4] ) {
 		for ( x = 0; x <= 3; x++ )
 			for ( y = 0; y <= 3; y++ )
 				board[x][y] = eeprom_read_word( &boardsave[x][y] );
+		score = eeprom_read_dword( &scoresave );
 		return true;
 	} else
 		return false;
