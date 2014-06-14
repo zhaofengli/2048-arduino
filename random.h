@@ -34,7 +34,17 @@
 #include <Arduino.h>
 #include "config.h"
 
+// == Runtime variables ==
+unsigned char seedLifeCounter = 0;
+
 // == Function prototypes ==
+/* getRandom
+   
+   Wrapper of Arduino's random() function, which automatically sets new 
+   random seeds when needed.
+*/
+unsigned char getRandom( unsigned char max );
+
 /* getRandomTileValue
    
    Get the value for a new tile.
@@ -60,6 +70,19 @@ void getRandomCoord( unsigned char *x, unsigned char *y );
 unsigned long getRandomSeed();
 
 // == Actual code ==
+/* getRandom
+   
+   Wrapper of Arduino's random() function, which automatically sets new 
+   random seeds when needed.
+*/
+unsigned char getRandom( unsigned char max ) {
+	if ( !seedLifeCounter ) {
+		randomSeed( getRandomSeed() );
+		seedLifeCounter = randomBits;
+	}
+	return random( max );
+}
+
 /* getRandomTileValue
    
    Get the value for a new tile.
@@ -67,8 +90,8 @@ unsigned long getRandomSeed();
    Returns 2 (90% chance) or 4 (10% chance)
 */
 unsigned int getRandomTileValue() {
-	randomSeed( getRandomSeed() );
-	unsigned int tile = random( 10 ) < 9 ? 2 : 4;
+	unsigned int tile = getRandom( 10 ) < 9 ? 2 : 4;
+	seedLifeCounter--;
 	return tile;
 }
 
@@ -79,9 +102,8 @@ unsigned int getRandomTileValue() {
    Sets x and y to a coordinate of a random tile.
 */
 void getRandomCoord( unsigned char *x, unsigned char *y ) {
-	randomSeed( getRandomSeed() );
-	(*x) = random( 4 ); // 0 to 3
-	(*y) = random( 4 );
+	(*x) = getRandom( 4 ); // 0 to 3
+	(*y) = getRandom( 4 );
 }
 
 /* getRandomSeed
