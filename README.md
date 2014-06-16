@@ -5,6 +5,9 @@ its display, and four buttons are used for controlling.
 After achieving 2048, the player can go on for even larger tiles (up to 32768).
 The program fits inside an ATmega8, when serial interface is disabled.
 
+A picture of it in action:
+![Demo](http://lizhaofeng1998.github.io/2048-arduino/images/demo.jpg)
+
 ## Getting started
 ### Preparation
 1. Download the source code by [cloning the repo](https://github.com/lizhaofeng1998/2048-arduino.git), or 
