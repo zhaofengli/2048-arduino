@@ -1,4 +1,4 @@
-# 2048 for Arduino [![Build Status](https://travis-ci.org/lizhaofeng1998/2048-arduino.svg?branch=master)](https://travis-ci.org/lizhaofeng1998/2048-arduino)
+# 2048 for Arduino [![Build Status](https://travis-ci.org/zhaofengli/2048-arduino.svg?branch=master)](https://travis-ci.org/zhaofengli/2048-arduino)
 A clone of the popular tile-joining game [2048](https://gabrielecirulli.github.io/2048/) for the Arduino platform.
 A PCD8544 LCD screen (The one used on the "indestructible" Nokia 3110 and 5110) is used as 
 its display, and four buttons are used for controlling.
@@ -6,12 +6,12 @@ After achieving 2048, the player can go on for even larger tiles (up to 32768).
 The program fits inside an ATmega8, when serial interface is disabled.
 
 A picture of it in action:
-![Demo](http://lizhaofeng1998.github.io/2048-arduino/images/demo.jpg)
+![Demo](http://zhaofengli.github.io/2048-arduino/images/demo.jpg)
 
 ## Getting started
 ### Preparation
-1. Download the source code by [cloning the repo](https://github.com/lizhaofeng1998/2048-arduino.git), or 
-   downloading [the zipped version](https://github.com/lizhaofeng1998/2048-arduino/archive/master.zip).
+1. Download the source code by [cloning the repo](https://github.com/zhaofengli/2048-arduino.git), or 
+   downloading [the zipped version](https://github.com/zhaofengli/2048-arduino/archive/master.zip).
 2. Edit the configuations in `config.h`.
 3. If you have `enableBounceLibrary` set to 1, download and install the Bounce library from 
    [Bounce-Arduino-Wiring](https://github.com/thomasfredericks/Bounce-Arduino-Wiring).
