@@ -71,7 +71,7 @@ The program runs best at 8MHz and above. If you have a external crystal attached
 have the correct fuse bits set.
 
 ## Contributing
-You are welcome to make changes to the source code! Simple fork the repo, make your changes and 
+You are welcome to make changes to the source code! Simply fork the repo, make your changes and 
 submit a pull request. Thank you for your contributions!
 
 ## Exploring the source
