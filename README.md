@@ -70,6 +70,9 @@ Please check your configuations in the `ADC` and `Battery meter` sections.
 The program runs best at 8MHz and above. If you have a external crystal attached, check if you 
 have the correct fuse bits set.
 
+## PC demo
+You can play the game on your PC! There is `demo.cpp` demistrating the use of the platform-independent code in the project. Just build it with `g++ -o demo demo.cpp`. Use "wasd" to move the numbers.
+
 ## Contributing
 You are welcome to make changes to the source code! Simply fork the repo, make your changes and 
 submit a pull request. Thank you for your contributions!
@@ -90,6 +93,7 @@ submit a pull request. Thank you for your contributions!
 * `serial.h` contains a wrapper for the standard Serial library
 * `bitmap.h` contains the logo bitmap
 * `button.h` contains the button handling routines
+* `demo.cpp` contains a quick-and-dirty wrapper of `board.h`, intended to be run on your PC
 * `tests/` contains unit tests for `board.h` and `format.h`
 
 ## Acknowledgement
