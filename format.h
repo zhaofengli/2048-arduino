@@ -80,7 +80,7 @@ char * getTileString( char * buffer, unsigned int value ) {
 		strcpy( buffer, ".  " );
 		return buffer;
 	} else if ( value < 1024 ) { // just right-pad it!
-		sprintf( buffer, "%-3hu", value );
+		sprintf( buffer, "%-3u", value );
 		return buffer;
 	} else { // we need to prepend a marker
 		switch ( value ) { // hard-coded :P
